@@ -1,0 +1,9 @@
+{{ define "title" }}Home Page{{ end }}
+{{ define "body" }}
+<div class="container mx-auto space-y-4">
+    <span>Here are some different buttons</span>
+    {{ BasicButton "Inner Text" .IsDisabled }}
+    {{ RoundedButton "My Rounded Button" }}
+    {{ template "BasicButton" .MyViewData }}{{/* Directly call the template if you want */}}
+</div>
+{{ end }}

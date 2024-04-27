@@ -1,0 +1,8 @@
+{{- /*gotype:ui/components.ButtonProps*/ -}}
+{{ template "BasicButton" . }}{{/*This is the default variant of this component*/}}
+{{ define "BasicButton" }}
+    <div class="h-8 bg-red-600 {{if not .Disabled }}hover:bg-red-800{{ end }} text-center">{{ .Text }}</div>
+{{ end }}
+{{ define "RoundedButton" }}
+    <div class="h-8 bg-red-600 hover:bg-red-800 text-center rounded-full">{{ .Text }}</div>
+{{ end }}
